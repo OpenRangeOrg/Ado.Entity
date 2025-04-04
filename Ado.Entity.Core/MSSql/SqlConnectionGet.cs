@@ -49,7 +49,7 @@ namespace Ado.Entity.Core.MSSql
                 }
                 catch (Exception ex)
                 {
-                    return dtoList;
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {

@@ -56,7 +56,7 @@ namespace Ado.Entity.Core.PGSql
             }
             catch (Exception ex)
             {
-                return dtoList;
+                throw new Exception(ex.ToString());
             }
             return dtoList;
         }

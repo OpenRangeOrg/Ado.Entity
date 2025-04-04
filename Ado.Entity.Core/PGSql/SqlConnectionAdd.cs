@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Data;
 using Npgsql;
 using NpgsqlTypes;
+using Ado.Entity.Core;
 
 namespace Ado.Entity.Core.PGSql
 {
@@ -25,12 +26,12 @@ namespace Ado.Entity.Core.PGSql
                             con.Open();
                             objSqlCommand.ExecuteNonQuery();
                             con.Close();
-                        }
+                    }
                     return true;
                 }
                 catch (Exception ex)
                 {
-                    return false;
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {
@@ -62,7 +63,7 @@ namespace Ado.Entity.Core.PGSql
                 }
                 catch (Exception ex)
                 {
-                    return false;
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {
@@ -90,7 +91,7 @@ namespace Ado.Entity.Core.PGSql
                 }
                 catch (Exception ex)
                 {
-                    return false;
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {

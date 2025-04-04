@@ -29,7 +29,7 @@ namespace Ado.Entity.Core.PGSql
                 }
                 catch (Exception ex)
                 {
-                    return false;
+                    throw new Exception(ex.ToString());
                 }
                 finally
                 {
